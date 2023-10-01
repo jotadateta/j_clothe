@@ -23,7 +23,9 @@ Config.men_removemask = -1
 Config.men_removetshirt = 15
 Config.men_removeears = -1
 Config.men_removebag = 0
-Config.men_removechain = -1 
+Config.men_removechain = -1
+----Debug for arms---
+Config.men_removearmsdebug = 15
 ----WOMAN-----
 Config.woman_removetorso = 15
 Config.woman_removejeans = 14
@@ -36,6 +38,8 @@ Config.woman_removetshirt = -1
 Config.woman_removeears = -1
 Config.woman_removebag = 0
 Config.woman_removechain = -1 
+----Debug for arms---
+Config.woman_removearmsdebug = 15
 -------------------
 --Clothe commands--
 -------------------

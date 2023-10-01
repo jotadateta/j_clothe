@@ -145,6 +145,8 @@ end)
 RegisterNetEvent("jotadateta:client:getclothes", function(clothe_id, prop)
     local player = PlayerPedId()
     local sex = nil
+    
+    local arms_debug = false
     --sexo e modelo do ped
     local hash = GetEntityModel(player)
     --dar save ao sexo do ped para variavel "sex"
@@ -203,6 +205,7 @@ RegisterNetEvent("jotadateta:client:getclothes", function(clothe_id, prop)
 	else
 		print("não é prop")
 		if clothe_id == 11 then
+            arms_debug = true
             progressbar_text = Lang:t("progressbar.torso_progressbar")
             if sex == "men" then
                 removed_config = Config.men_removetorso
@@ -317,6 +320,11 @@ RegisterNetEvent("jotadateta:client:getclothes", function(clothe_id, prop)
                 ClearPedProp(player,clothe_id)
             else
                 SetPedComponentVariation(player, clothe_id, removed_config, 0, 0)
+                if arms_debug and sex == "men" then
+                    SetPedComponentVariation(player, 3, Config.men_removearmsdebug, 0, 0)
+                elseif arms_debug and sex == "woman" then
+                    SetPedComponentVariation(player, 3, Config.woman_removearmsdebug, 0, 0)
+                end
             end
             --Dar trigger a adicionar o item com a informação acima
             TriggerServerEvent("jotadateta:server:giveitem", skin_id, skin_texture, clothe_id, prop)
