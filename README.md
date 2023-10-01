@@ -8,7 +8,7 @@ To install the script, simply put the file in the `resources` folder of your Fiv
 
 ### Add items 
 
-add this to qb-core\shared\items.lua
+add this to `qb-core\shared\items.lua`
 
 ```
     --Roupa Jota
@@ -27,9 +27,95 @@ add this to qb-core\shared\items.lua
     ['bracelet'] = { ['name'] = 'bracelet', ['label'] = 'Bracelet', ['weight'] = 100, ['type'] = 'item', ['image'] = 'bracelet.png', ['unique'] = true, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'A wearable bracelet accessory.' },
 
 ```
+To have a description with the information about the items , you need to add this to `qb-inventory\html\js\app.js` or similiar to yout inventory.
 
-
-
+    } else if (itemData.name == "torso") {
+    	$(".item-info-title").html("<p>" + itemData.label + "</p>");
+    	$(".item-info-description").html(
+    		"<p><strong>Id Clothe: </strong><span>" +
+    		itemData.info.id_clothe +
+    		"</span></p><p><strong>Id Texture: </strong><span>" +
+    		itemData.info.id_texture +
+    		"</span></p><p><strong>Description: </strong><span>" +
+    		itemData.info.description +
+    		"</span></p>"
+    	);
+    } else if (itemData.name == "tshirt") {
+    	$(".item-info-title").html("<p>" + itemData.label + "</p>");
+    	$(".item-info-description").html(
+    		"<p><strong>Id Clothe: </strong><span>" +
+    		itemData.info.id_clothe +
+    		"</span></p><p><strong>Id Texture: </strong><span>" +
+    		itemData.info.id_texture +
+    		"</span></p><p><strong>Description: </strong><span>" +
+    		itemData.info.description +
+    		"</span></p>"
+    	);
+    } else if (itemData.name == "arms") {
+    $(".item-info-title").html("<p>" + itemData.label + "</p>");
+    $(".item-info-description").html(
+    	"<p><strong>Id Clothe: </strong><span>" +
+    	itemData.info.id_clothe +
+    	"</span></p><p><strong>Id Texture: </strong><span>" +
+    	itemData.info.id_texture +
+    	"</span></p><p><strong>Description: </strong><span>" +
+    	itemData.info.description +
+    	"</span></p>"
+    ); } else if (itemData.name == "jeans") {
+    	$(".item-info-title").html("<p>" + itemData.label + "</p>");
+    	$(".item-info-description").html(
+    		"<p><strong>Id Clothe: </strong><span>" +
+    		itemData.info.id_clothe +
+    		"</span></p><p><strong>Id Texture: </strong><span>" +
+    		itemData.info.id_texture +
+    		"</span></p><p><strong>Description: </strong><span>" +
+    		itemData.info.description +
+    		"</span></p>"
+    	);
+    } else if (itemData.name == "shoes") {
+    	$(".item-info-title").html("<p>" + itemData.label + "</p>");
+    	$(".item-info-description").html(
+    		"<p><strong>Id Clothe: </strong><span>" +
+    		itemData.info.id_clothe +
+    		"</span></p><p><strong>Id Texture: </strong><span>" +
+    		itemData.info.id_texture +
+    		"</span></p><p><strong>Description: </strong><span>" +
+    		itemData.info.description +
+    		"</span></p>"
+    	);
+    } else if (itemData.name == "bag") {
+    	$(".item-info-title").html("<p>" + itemData.label + "</p>");
+    	$(".item-info-description").html(
+    		"<p><strong>Id Clothe: </strong><span>" +
+    		itemData.info.id_clothe +
+    		"</span></p><p><strong>Id Texture: </strong><span>" +
+    		itemData.info.id_texture +
+    		"</span></p><p><strong>Description: </strong><span>" +
+    		itemData.info.description +
+    		"</span></p>"
+    	); 
+    } else if (itemData.name == "chain") {
+    	$(".item-info-title").html("<p>" + itemData.label + "</p>");
+    	$(".item-info-description").html(
+    		"<p><strong>Id Clothe: </strong><span>" +
+    		itemData.info.id_clothe +
+    		"</span></p><p><strong>Id Texture: </strong><span>" +
+    		itemData.info.id_texture +
+    		"</span></p><p><strong>Description: </strong><span>" +
+    		itemData.info.description +
+    		"</span></p>"
+    	);
+    } else if (itemData.name == "mask") {
+    	$(".item-info-title").html("<p>" + itemData.label + "</p>");
+    	$(".item-info-description").html(
+    		"<p><strong>Id Clothe: </strong><span>" +
+    		itemData.info.id_clothe +
+    		"</span></p><p><strong>Id Texture: </strong><span>" +
+    		itemData.info.id_texture +
+    		"</span></p><p><strong>Description: </strong><span>" +
+    		itemData.info.description +
+    		"</span></p>"
+    	);
 
 ## Features
 
